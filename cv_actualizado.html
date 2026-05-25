@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Tomás Valenzuela Vilches</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+    line-height: 1.35;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    padding: 0.75in 0.9in;
+  }
+
+  /* NAME */
+  .name {
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  hr {
+    border: none;
+    border-top: 0.8px solid #000;
+    margin: 3px 0 3px 0;
+  }
+
+  /* CONTACT */
+  .contact {
+    text-align: center;
+    font-size: 10pt;
+    margin-bottom: 10px;
+  }
+
+  /* SECTION HEADER */
+  .section-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 11pt;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+
+  /* EMPLOYER BLOCK */
+  .employer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .employer-name { font-weight: bold; }
+  .location { font-size: 10.5pt; }
+  .job-title { font-weight: bold; }
+  .date { font-size: 10.5pt; }
+
+  /* BULLET LIST */
+  ul {
+    margin: 2px 0 6px 0;
+    padding-left: 1.4em;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    margin-bottom: 1px;
+    text-align: justify;
+  }
+
+  ul li::before {
+    content: '■';
+    font-size: 5pt;
+    position: absolute;
+    left: -1.2em;
+    top: 3px;
+    color: #000;
+  }
+
+  /* SKILLS SECTION */
+  .skills p {
+    margin-bottom: 3px;
+    text-align: justify;
+  }
+
+  @media print {
+    body { font-size: 11pt; }
+    .page {
+      width: 100%;
+      padding: 0.75in 0.9in;
+      min-height: auto;
+    }
+    @page { margin: 0; size: letter; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- NAME -->
+  <div class="name">Tomás Valenzuela Vilches</div>
+  <hr>
+  <div class="contact">
+    Avenida Vicuña Mackenna 3756 &bull; Santiago, Chile &bull; tomas.valenzuelavi@usm.cl &bull; +56945544965
+  </div>
+
+  <!-- EDUCACIÓN -->
+  <div class="section-title">Educación</div>
+
+  <div class="employer-row">
+    <span class="employer-name">Universidad Técnica Federico Santa María</span>
+    <span class="location">Santiago, Chile</span>
+  </div>
+  <div class="employer-row">
+    <span>Ingeniería Civil Informática</span>
+    <span class="date">2021 &ndash; Actualidad</span>
+  </div>
+
+  <!-- EXPERIENCIA -->
+  <div class="section-title">Experiencia</div>
+
+  <div class="employer-row">
+    <span class="employer-name">InTouchCRM / área de tecnologías de negocio</span>
+    <span class="location">Santiago, Chile</span>
+  </div>
+  <div class="employer-row">
+    <span class="job-title">Analista de Tecnologías de Negocio</span>
+    <span class="date">Agosto 2025 &ndash; Actualidad</span>
+  </div>
+  <ul>
+    <li>Análisis de requerimientos operativos y comerciales para proponer y desarrollar soluciones técnicas de automatización, integración y gestión de información.</li>
+    <li>Diseño e implementación de flujos de automatización mediante <strong>n8n</strong>, <strong>APIs</strong>, <strong>webhooks</strong> e integración con <strong>bases de datos</strong>, asegurando consistencia de información entre sistemas.</li>
+    <li>Evaluación e implementación de soluciones apoyadas en <strong>IA generativa</strong>, automatización y diseño de prompts, utilizando herramientas como <strong>GPT</strong> y <strong>Claude</strong> según las necesidades de cada proyecto.</li>
+    <li>Desarrollo y ajuste de lógica de negocio para agentes conversacionales, incluyendo validaciones, control de estados, manejo de ambigüedad, reglas de resolución y resguardo de la integridad de datos en procesos de seguimiento.</li>
+    <li>Diseño de tablas relacionadas y cruces de información para alinear conversaciones, leads, seguimientos y estados comerciales, evitando pérdida de datos durante el proceso.</li>
+    <li>Desarrollo de integraciones y componentes backend en <strong>Python</strong> y <strong>PHP</strong>, incluyendo consumo de APIs, transformación de datos, normalización de payloads y automatización de procesos operativos.</li>
+    <li>Participación principal en la definición técnica y desarrollo de proyectos de automatización e IA, coordinando tareas con otros colaboradores cuando fue necesario.</li>
+  </ul>
+
+  <div class="employer-row">
+    <span class="employer-name">La Tienda del Chef</span>
+    <span class="location">La Serena, Chile</span>
+  </div>
+  <div class="employer-row">
+    <span class="job-title">Atención al cliente / Apoyo TI</span>
+    <span class="date">Noviembre 2023 &ndash; Febrero 2024</span>
+  </div>
+  <ul>
+    <li>Apoyo en atención al cliente y soporte operativo-tecnológico básico.</li>
+  </ul>
+
+  <div class="employer-row">
+    <span class="employer-name">Casino Enjoy</span>
+    <span class="location">La Serena, Chile</span>
+  </div>
+  <div class="employer-row">
+    <span class="job-title">Croupier</span>
+    <span class="date">Marzo 2018 &ndash; Septiembre 2018</span>
+  </div>
+  <ul>
+    <li>Atención directa a clientes en entorno de alta exigencia operativa.</li>
+  </ul>
+
+  <!-- LIDERAZGO Y ACTIVIDADES -->
+  <div class="section-title">Liderazgo y Actividades</div>
+
+  <div class="employer-row">
+    <span class="employer-name">Universidad Técnica Federico Santa María</span>
+    <span class="location">Santiago, Chile</span>
+  </div>
+  <div class="employer-row">
+    <span class="job-title">Ayudante de Física 130</span>
+    <span class="date">2022 &ndash; 2024</span>
+  </div>
+  <ul>
+    <li>Apoyo académico a estudiantes y refuerzo de contenidos del curso.</li>
+  </ul>
+
+  <div class="employer-row">
+    <span class="employer-name">Universidad Técnica Federico Santa María</span>
+    <span class="location">Santiago, Chile</span>
+  </div>
+  <div class="employer-row">
+    <span class="job-title">Call Center / Centro de Alumnos de Informática</span>
+    <span class="date">2024</span>
+  </div>
+  <ul>
+    <li>Participación en actividades de apoyo institucional y representación estudiantil.</li>
+  </ul>
+
+  <!-- HABILIDADES -->
+  <div class="section-title">Habilidades</div>
+
+  <div class="skills">
+    <p><strong>Técnicas:</strong> Python, TypeScript, JavaScript, SQL Server, PostgreSQL, SQLite, Redis, PHP, Git, GitHub, Docker, Linux, JSON.</p>
+    <p><strong>Frameworks y librerías:</strong> FastAPI, Django, Next.js, React, Tailwind CSS, LangChain, LangGraph, SQLAlchemy, Celery, Playwright, pandas, Express.js.</p>
+    <p><strong>IA y LLMs:</strong> Google Gemini (Vertex AI), OpenAI GPT, Anthropic Claude, OpenRouter; diseño de prompts, agentes conversacionales, function calling, RAG.</p>
+    <p><strong>Cloud e infraestructura:</strong> Google Cloud Platform (Cloud Run, Firestore, Pub/Sub, Storage, STT/TTS, Vertex AI), Docker Compose.</p>
+    <p><strong>Integraciones:</strong> WhatsApp API (Meta / Baileys), Telnyx (PSTN/SIP), n8n, APIs REST, webhooks, AssemblyAI, Deepgram, Google Sheets API.</p>
+    <p><strong>Automatización y producto:</strong> Automatización de procesos, integración de sistemas, diseño de flujos conversacionales, máquinas de estado, lógica de negocio, validaciones y control de estados, web scraping.</p>
+    <p><strong>Idiomas:</strong> Inglés intermedio-avanzado.</p>
+    <p><strong>Cursos:</strong> 100 Days of Code: The Complete Python Pro Bootcamp (Dr. Angela Yu); Excel TOTAL en 30 Días &ndash; de Cero a Avanzado (Federico Garay).</p>
+  </div>
+
+</div>
+</body>
+</html>
