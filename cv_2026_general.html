@@ -123,13 +123,13 @@
   </div>
   <ul>
     <li><strong>Plataforma multi-tenant:</strong> responsable del orquestador de GranCRM (<strong>Django 5.2 + SQL Server</strong>):
-      SSO con JWT, una base de datos por cliente con enrutamiento <em>fail-closed</em>, aprovisionamiento automático e impersonación segura para soporte.</li>
-    <li><strong>Micro-frontends:</strong> migré las apps de iframes a <strong>Module Federation (React 18 + Vite)</strong>; hoy más de
-      20 sistemas conviven bajo un gateway <strong>Nginx</strong> single-origin con TLS y CSP.</li>
+      SSO con JWT, una base de datos por cliente con enrutamiento <em>fail-closed</em> y aprovisionamiento automático. Migré las apps de iframes a
+      <strong>Module Federation (React 18 + Vite)</strong>: hoy más de 20 sistemas conviven bajo un gateway <strong>Nginx</strong> single-origin.</li>
+    <li><strong>Aplicaciones del ecosistema:</strong> participé en el diseño y desarrollo de la mayoría de ellas: el CRM web que reemplaza
+      programas de escritorio en VB6, la mesa de ayuda con SLA, BI con Superset en lugar de Power BI, la pasarela de correo y el
+      chat interno, cuya arquitectura diseñé junto a otro ingeniero y cuyas métricas de uso construí.</li>
     <li><strong>IA en producción:</strong> desarrollé agentes de WhatsApp para <strong>Astara</strong>, <strong>CAVEM</strong> e InTouch con
-      <strong>LangGraph</strong>, Gemini y DeepSeek: tool calling contra la base de datos, RAG híbrido alimentado por un crawler propio (Celery + Playwright) y derivación a humanos.</li>
-    <li><strong>Operación:</strong> mantengo los entornos DEV, QA y PROD con Docker Compose y runbooks; resolví las caídas por
-      memoria de QA (49 contenedores en 7,8 GB) a partir del uso real medido en logs.</li>
+      <strong>LangGraph</strong>, Gemini y DeepSeek: tool calling contra la base de datos, RAG híbrido y derivación a humanos.</li>
     <li><strong>Documentación y trabajo con IA:</strong> escribí la documentación central del ecosistema (23 sistemas y sus contratos
       de integración) y trabajo con agentes de código (Claude Code) guiados por specs y planes.</li>
   </ul>
@@ -142,7 +142,7 @@
   </div>
   <div class="project-tech">Django ASGI, Channels, WebSockets, React 18, TypeScript, Meta Graph API</div>
   <ul>
-    <li>Reemplazo de Infobip hecho desde cero: WhatsApp, Messenger, Instagram y chat web en una bandeja en tiempo real, con colas, SLA y widget embebible.</li>
+    <li>Reemplazo de Infobip hecho desde cero: WhatsApp, Messenger, Instagram y chat web en una sola bandeja en tiempo real.</li>
   </ul>
 
   <div class="item-header">
@@ -155,21 +155,30 @@
   </ul>
 
   <div class="item-header">
-    <span class="project-name">Asistente LLM transversal con MCP</span>
+    <span class="project-name">Filtro de CV — Evaluación de postulantes con IA</span>
     <span class="date">2026</span>
   </div>
-  <div class="project-tech">LangChain, Model Context Protocol, PostgreSQL, Playwright</div>
+  <div class="project-tech">Django Ninja, React 18, DeepSeek, Gemini, Langfuse</div>
   <ul>
-    <li>Asistente integrable en cualquier app: consulta datos vía MCP, oculta datos personales y valida que sus respuestas estén respaldadas.</li>
+    <li>Ordena CVs en lote según la pauta de cada cargo; la nota la calcula código determinista y cada criterio cita el CV.</li>
+  </ul>
+
+  <div class="item-header">
+    <span class="project-name">Onboarding de bots</span>
+    <span class="date">2026 &ndash; en curso</span>
+  </div>
+  <div class="project-tech">Django, React 18, Module Federation, ffmpeg, Gemini</div>
+  <ul>
+    <li>Levanta los requerimientos de cada bot nuevo, con portal para el cliente y reuniones transcritas que proponen respuestas.</li>
   </ul>
 
   <div class="section-title">Habilidades Técnicas</div>
 
   <div class="skills-block">
     <p><strong>Lenguajes:</strong> Python, TypeScript, JavaScript, SQL (T-SQL, PostgreSQL).</p>
-    <p><strong>Backend & Arquitectura:</strong> Django 5.2, Django Channels, Django Ninja, FastAPI, Celery, Redis, SQL Server, PostgreSQL,
+    <p><strong>Backend & Arquitectura:</strong> Django 5.2/6, Django Channels, Django Ninja, FastAPI, Celery, Redis, SQL Server, PostgreSQL,
       WebSockets, SSE, Docker Compose, Nginx, Linux, GitHub Actions, pytest.</p>
-    <p><strong>IA & LLMs:</strong> LangGraph, LangChain, MCP, Gemini, OpenAI, Claude, DeepSeek, RAG con pgvector, Langfuse, prompt engineering.</p>
+    <p><strong>IA & LLMs:</strong> LangGraph, LangChain, MCP, Gemini, OpenAI, Claude, DeepSeek, RAG con pgvector, Langfuse, transcripción de audio, prompt engineering.</p>
     <p><strong>Frontend:</strong> React 18, Vite, TypeScript, <code>@duralux/ui</code>, Storybook, Vitest, Bootstrap 5, Tailwind CSS.</p>
     <p><strong>Idiomas:</strong> Español (nativo), Inglés (técnico intermedio-avanzado).</p>
   </div>

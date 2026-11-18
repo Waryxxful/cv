@@ -130,16 +130,17 @@
   </div>
   <ul>
     <li><strong>Control plane multi-tenant:</strong> orquestador en <strong>Django 5.2 + SQL Server</strong> con SSO por JWT, una base de
-      datos por cliente con enrutamiento <em>fail-closed</em>, revocación de sesiones, aprovisionamiento automático e impersonación
-      segura de clientes para soporte.</li>
+      datos por cliente con enrutamiento <em>fail-closed</em>, revocación de sesiones, aprovisionamiento automático, impersonación
+      segura para soporte y credenciales SQL de mínimo privilegio por entorno.</li>
     <li><strong>Micro-frontends:</strong> migré las apps de iframes a <strong>Module Federation (React 18 + Vite)</strong> y separé el shell en
       su propio proyecto, todo detrás de un gateway <strong>Nginx</strong> single-origin con TLS, CSP y HSTS.</li>
     <li><strong>Notificaciones en tiempo real:</strong> campanita del ecosistema con <strong>SSE</strong> y Web Push, suscripción por tipo de
       evento y una API interna para que cualquier app avise a sus usuarios.</li>
-    <li><strong>Entornos y operación:</strong> DEV, QA y PROD con Docker Compose, credenciales SQL de mínimo privilegio por entorno y
-      runbooks de despliegue; resolví las caídas por memoria de QA (49 contenedores en 7,8 GB) midiendo el uso real.</li>
-    <li><strong>Documentación como código:</strong> escribí la base única de documentación del ecosistema (23 sistemas, contratos de
-      integración y límites del orquestador), donde cada afirmación cita el código que la respalda.</li>
+    <li><strong>Aplicaciones del ecosistema:</strong> participé en el diseño y desarrollo de la mayoría de las apps satélite: el CRM web que
+      reemplaza programas de escritorio en VB6, la mesa de ayuda con SLA, BI con Superset en lugar de Power BI, la pasarela de
+      correo con trazabilidad de envíos, el tablero Kanban de TI y los informes de redes sociales para Junaeb.</li>
+    <li><strong>Documentación como código:</strong> escribí la documentación central del ecosistema (23 sistemas y sus contratos
+      de integración), donde cada afirmación cita el código que la respalda.</li>
   </ul>
 
   <div class="section-title">Proyectos Destacados</div>
@@ -151,7 +152,17 @@
   <div class="project-tech">Django ASGI, Channels, WebSockets, React 18, TypeScript, Meta Graph API</div>
   <ul>
     <li>Reemplazo de Infobip construido desde cero: WhatsApp, Messenger, Instagram y chat web en una sola bandeja en tiempo
-      real, con colas y SLA, reglas de asignación, plantillas y un widget web embebible sin dependencias.</li>
+      real, con colas, SLA, reglas de asignación y un widget web embebible.</li>
+  </ul>
+
+  <div class="item-header">
+    <span class="project-name">Chat interno de GranCRM</span>
+    <span class="date">2026</span>
+  </div>
+  <div class="project-tech">Django Channels, WebSockets, React 18, Module Federation</div>
+  <ul>
+    <li>Diseñé su arquitectura junto a otro ingeniero: un servicio sin usuarios propios que usa el padrón y la jerarquía del
+      orquestador y un dock en todo el shell. Construí además sus métricas de uso.</li>
   </ul>
 
   <div class="item-header">
@@ -160,28 +171,19 @@
   </div>
   <div class="project-tech">Python, LangGraph, Gemini, DeepSeek, FastAPI, pgvector</div>
   <ul>
-    <li>Bots en producción integrados a la plataforma: agendamiento y cotizaciones con tool calling contra la base de datos,
-      RAG híbrido y derivación a ejecutivos humanos; despachadores del webhook de Meta que enrutan por número.</li>
-  </ul>
-
-  <div class="item-header">
-    <span class="project-name">Sistema de diseño <code>@duralux/ui</code></span>
-    <span class="date">2026</span>
-  </div>
-  <div class="project-tech">React 18, TypeScript, SCSS, Storybook, Vitest</div>
-  <ul>
-    <li>Librería de componentes compartida por las apps satélite, con tokens de diseño y reglas de fidelidad visual.</li>
+    <li>Bots en producción integrados a la plataforma, con tool calling contra la base de datos, RAG híbrido y derivación a
+      humanos; despachadores del webhook de Meta que enrutan cada mensaje según el número.</li>
   </ul>
 
   <div class="section-title">Habilidades Técnicas</div>
 
   <div class="skills-block">
-    <p><strong>Backend & Tiempo real:</strong> Django 5.2, Django Channels, Django Ninja, FastAPI, Celery, Redis, ASGI, WebSockets,
-      SSE, REST, Webhooks, JWT/SSO.</p>
+    <p><strong>Backend & Tiempo real:</strong> Django 5.2, Django Channels, Django Ninja, FastAPI, Celery, Redis, WebSockets,
+      SSE, Webhooks, JWT/SSO.</p>
     <p><strong>Datos:</strong> SQL Server (T-SQL, stored procedures), PostgreSQL, pgvector, SQLite.</p>
-    <p><strong>Frontend:</strong> React 18, TypeScript, Vite, Module Federation, Storybook, Vitest, Bootstrap 5, Tailwind CSS.</p>
-    <p><strong>Infraestructura & Calidad:</strong> Docker Compose, Nginx, Linux, GitHub Actions, pytest, Playwright.</p>
-    <p><strong>IA:</strong> LangGraph, LangChain, MCP, Gemini, Claude, DeepSeek, RAG. <strong>Idiomas:</strong> Español (nativo), Inglés (técnico intermedio-avanzado).</p>
+    <p><strong>Frontend:</strong> React 18, TypeScript, Vite, Module Federation, <code>@duralux/ui</code>, Storybook, Vitest, Bootstrap 5, Tailwind CSS.</p>
+    <p><strong>Infraestructura & Datos:</strong> Docker Compose, Nginx, Linux, GitHub Actions, Apache Superset, SendGrid, pytest, Playwright.</p>
+    <p><strong>IA:</strong> LangGraph, LangChain, MCP, Gemini, Claude, DeepSeek, RAG. <strong>Idiomas:</strong> Español (nativo), Inglés (intermedio-avanzado).</p>
   </div>
 
 </div>

@@ -135,13 +135,13 @@
       con <strong>LangGraph</strong> (supervisor y especialistas), Gemini y DeepSeek, con tool calling contra stored procedures
       para consultar stock y agendar citas, y un modo de derivación a ejecutivos humanos.</li>
     <li><strong>RAG híbrido:</strong> búsqueda semántica y por palabras con fusión RRF sobre <strong>pgvector</strong> (un esquema por cliente)
-      y rerank con Cohere, alimentada por catálogos, sucursales y fichas técnicas actualizadas.</li>
+      y rerank con Cohere, alimentada por un crawler propio de catálogos, sucursales y fichas técnicas.</li>
     <li><strong>Confiabilidad y observabilidad:</strong> instrumenté los bots con <strong>Langfuse</strong> para medir latencia por etapa y
       escribí la guía interna de bots: cómo levantar uno nuevo y un catálogo de modos de falla reales con su defensa.</li>
-    <li><strong>Plataforma que los sostiene:</strong> responsable del orquestador multi-tenant de GranCRM (Django 5.2 + SQL Server,
-      SSO con JWT, una base de datos por cliente), donde cada bot se integra con notificaciones y permisos del ecosistema.</li>
-    <li><strong>Desarrollo asistido por IA:</strong> trabajo a diario con agentes de código (Claude Code) guiados por specs, planes y
-      subagentes, con verificación antes de cada entrega.</li>
+    <li><strong>Asistente LLM transversal:</strong> agente LangChain que cualquier app puede integrar; consulta datos vía servidores
+      <strong>MCP</strong>, oculta datos personales, valida que sus respuestas estén respaldadas y respeta un presupuesto por cliente.</li>
+    <li><strong>Plataforma y forma de trabajo:</strong> responsable del orquestador multi-tenant de GranCRM (Django + SQL Server, SSO
+      con JWT) donde viven los bots y más de 20 apps; trabajo con agentes de código (Claude Code) guiados por specs y planes.</li>
   </ul>
 
   <div class="section-title">Proyectos Destacados</div>
@@ -153,34 +153,34 @@
   <div class="project-tech">Python, LangGraph, Gemini, WhatsApp Cloud API, pgvector</div>
   <ul>
     <li>Primer bot fuera del rubro automotriz, en producción desde octubre: califica leads con un puntaje determinístico
-      y avisa al equipo comercial en tiempo real cuando aparece una oportunidad caliente.</li>
+      y avisa al equipo comercial en tiempo real.</li>
   </ul>
 
   <div class="item-header">
-    <span class="project-name">Asistente LLM transversal con MCP</span>
+    <span class="project-name">Filtro de CV — Evaluación de postulantes con IA</span>
     <span class="date">2026</span>
   </div>
-  <div class="project-tech">LangChain, Model Context Protocol, PostgreSQL, Playwright</div>
+  <div class="project-tech">Django Ninja, React 18, DeepSeek, Gemini, Langfuse</div>
   <ul>
-    <li>Asistente integrable en cualquier app: consulta datos vía servidores MCP, oculta datos personales, valida que sus
-      respuestas estén respaldadas y respeta un presupuesto diario de tokens por cliente.</li>
+    <li>Ordena CVs en lote según la pauta de cada cargo: los modelos solo extraen evidencia y la nota la calcula código
+      determinista, así la misma ficha da siempre el mismo resultado, con una cita del CV por criterio.</li>
   </ul>
 
   <div class="item-header">
-    <span class="project-name">Pipeline de conocimiento para bots</span>
-    <span class="date">2026</span>
+    <span class="project-name">Onboarding de bots</span>
+    <span class="date">2026 &ndash; en curso</span>
   </div>
-  <div class="project-tech">Celery, Redis, Playwright, httpx, DeepSeek, Django Ninja</div>
+  <div class="project-tech">Django, React 18, Module Federation, ffmpeg, Gemini, Langfuse</div>
   <ul>
-    <li>Crawler que extrae catálogos y PDFs técnicos de sitios de marcas, los normaliza con LLMs y los entrega a los bots,
-      con edición humana, versionado y rollback; 13 etapas cerradas con más de 600 pruebas automatizadas.</li>
+    <li>Levanta los requerimientos de cada bot nuevo: portal para el cliente y reuniones grabadas que se transcriben,
+      se analizan y se convierten en propuestas de respuesta que el equipo revisa.</li>
   </ul>
 
   <div class="section-title">Habilidades Técnicas</div>
 
   <div class="skills-block">
     <p><strong>IA & LLMs:</strong> LangGraph, LangChain, MCP, Gemini, OpenAI, Claude, DeepSeek, function calling, RAG híbrido,
-      pgvector, Cohere Rerank, Langfuse, salidas estructuradas con Pydantic, prompt engineering.</p>
+      pgvector, Cohere Rerank, Langfuse, transcripción de audio, salidas estructuradas con Pydantic.</p>
     <p><strong>Lenguajes:</strong> Python, TypeScript, JavaScript, SQL (T-SQL, PostgreSQL).</p>
     <p><strong>Backend & Datos:</strong> Django 5.2, Django Ninja, FastAPI, Celery, Redis, SQL Server, PostgreSQL, WebSockets, Webhooks.</p>
     <p><strong>Automatización & Infra:</strong> Playwright, httpx, WhatsApp Cloud API, Docker Compose, Nginx, Linux, pytest.</p>
