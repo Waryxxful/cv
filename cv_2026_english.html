@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resume — Tomás Valenzuela Vilches</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'EB Garamond', 'Georgia', serif;
-    font-size: 10.5pt;
-    color: #111;
+    font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+    font-size: 10pt;
+    color: #1a1a1a;
     background: #eef0f3;
-    line-height: 1.32;
+    line-height: 1.3;
     padding: 20px 0;
   }
 
@@ -42,7 +42,7 @@
   .contact a { color: #111; text-decoration: none; font-weight: 600; }
   .contact a:hover { text-decoration: underline; }
 
-  .summary { text-align: justify; font-size: 10.5pt; margin-bottom: 2px; }
+  .summary { text-align: left; font-size: 10.5pt; margin-bottom: 2px; }
 
   .section-title {
     font-weight: 700;
@@ -72,11 +72,11 @@
   .project-tech { font-size: 9.5pt; color: #333; font-style: italic; }
 
   ul { margin: 2px 0 5px 0; padding-left: 1.2em; list-style: none; }
-  ul li { position: relative; margin-bottom: 3px; text-align: justify; }
+  ul li { position: relative; margin-bottom: 3px; text-align: left; }
   ul li::before { content: '▪'; font-size: 7pt; position: absolute; left: -1.1em; top: 0; color: #222; }
 
   .skills-block { margin-top: 4px; }
-  .skills-block p { margin-bottom: 3px; text-align: justify; font-size: 10pt; line-height: 1.34; }
+  .skills-block p { margin-bottom: 3px; text-align: left; font-size: 10pt; line-height: 1.3; }
 
   @media print {
     body { background: #fff; padding: 0; }
@@ -123,14 +123,13 @@
   </div>
   <ul>
     <li><strong>Multi-tenant platform:</strong> own GranCRM’s control plane (<strong>Django 5.2 + SQL Server</strong>): JWT-based SSO,
-      a dedicated database per customer with fail-closed routing, automated provisioning and secure impersonation for support.</li>
-    <li><strong>Micro-frontends:</strong> migrated the apps from iframes to <strong>Module Federation (React 18 + Vite)</strong>; 20+ systems
-      now live behind a single-origin <strong>Nginx</strong> gateway with TLS and CSP.</li>
+      a dedicated database per customer with fail-closed routing and automated provisioning. Migrated the apps from iframes to
+      <strong>Module Federation (React 18 + Vite)</strong>: 20+ systems now live behind a single-origin <strong>Nginx</strong> gateway.</li>
+    <li><strong>Ecosystem apps:</strong> helped design and build most of them: a web CRM replacing VB6 desktop programs, an IT help
+      desk with SLAs, BI on Superset replacing Power BI, an email gateway and the internal chat, whose architecture I co-designed
+      with another engineer and whose usage metrics I built.</li>
     <li><strong>AI in production:</strong> built WhatsApp agents for <strong>Astara</strong>, <strong>CAVEM</strong> and InTouch with
-      <strong>LangGraph</strong>, Gemini and DeepSeek: tool calling against the database, hybrid RAG fed by an in-house crawler
-      (Celery + Playwright) and hand-off to human agents.</li>
-    <li><strong>Operations:</strong> maintain DEV, QA and PROD with Docker Compose and runbooks; fixed QA’s out-of-memory crashes
-      (49 containers on a 7.8 GB VM) based on real usage measured from logs.</li>
+      <strong>LangGraph</strong>, Gemini and DeepSeek: tool calling against the database, hybrid RAG and hand-off to humans.</li>
     <li><strong>Documentation & AI-assisted development:</strong> wrote the ecosystem’s core documentation (23 systems and their
       integration contracts) and work daily with coding agents (Claude Code) driven by specs and plans.</li>
   </ul>
@@ -143,7 +142,7 @@
   </div>
   <div class="project-tech">Django ASGI, Channels, WebSockets, React 18, TypeScript, Meta Graph API</div>
   <ul>
-    <li>Built from scratch to replace Infobip: WhatsApp, Messenger, Instagram and web chat in one real-time inbox, with queues, SLAs and an embeddable widget.</li>
+    <li>Built from scratch to replace Infobip: WhatsApp, Messenger, Instagram and web chat in one real-time inbox.</li>
   </ul>
 
   <div class="item-header">
@@ -156,12 +155,21 @@
   </ul>
 
   <div class="item-header">
-    <span class="project-name">Cross-app LLM assistant with MCP</span>
+    <span class="project-name">CV Screening — AI-assisted candidate evaluation</span>
     <span class="date">2026</span>
   </div>
-  <div class="project-tech">LangChain, Model Context Protocol, PostgreSQL, Playwright</div>
+  <div class="project-tech">Django Ninja, React 18, DeepSeek, Gemini, Langfuse</div>
   <ul>
-    <li>Assistant any app can embed: queries data through MCP servers, redacts personal data and checks that answers are grounded.</li>
+    <li>Ranks résumés in bulk against each role’s rubric; deterministic code computes the score and every criterion cites the CV.</li>
+  </ul>
+
+  <div class="item-header">
+    <span class="project-name">Bot Onboarding</span>
+    <span class="date">2026 &ndash; ongoing</span>
+  </div>
+  <div class="project-tech">Django, React 18, Module Federation, ffmpeg, Gemini</div>
+  <ul>
+    <li>Gathers requirements for each new bot, with a client portal and transcribed meetings that draft the answers.</li>
   </ul>
 
   <div class="section-title">Technical Skills</div>
