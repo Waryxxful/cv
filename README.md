@@ -8,4 +8,4 @@ Versiones en HTML, de una página tamaño carta. Para obtener el PDF, abre el ar
 | `cv_2026_ia.html` | Postulaciones a roles de IA aplicada, agentes, LLM/RAG. |
 | `cv_2026_plataforma.html` | Roles de backend, full-stack o plataforma. |
 | `cv_2026_english.html` | Postulaciones en inglés o a empresas remotas. |
-| `cv_actualizado.html` | Versión anterior (agosto 2026). |
+| `cv_actualizado.html` | Versión anterior (septiembre 2026). |
