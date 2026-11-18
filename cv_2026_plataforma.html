@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Tomás Valenzuela Vilches · Plataforma & Full-Stack</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-size: 10.5pt;
+    color: #111;
+    background: #eef0f3;
+    line-height: 1.32;
+    padding: 20px 0;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    padding: 0.55in 0.8in;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Variante: cabecera alineada a la izquierda con contacto a la derecha */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid #111;
+    margin-bottom: 10px;
+  }
+  .name { font-size: 18pt; font-weight: 700; letter-spacing: 0.4px; line-height: 1.1; }
+  .headline { font-style: italic; font-size: 10.5pt; color: #222; }
+  .contact { text-align: right; font-size: 9.5pt; line-height: 1.35; color: #222; }
+  .contact a { color: #111; text-decoration: none; font-weight: 600; }
+  .contact a:hover { text-decoration: underline; }
+
+  .summary { text-align: justify; font-size: 10.5pt; margin-bottom: 2px; }
+
+  .section-title {
+    font-weight: 700;
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 0.8px solid #222;
+    padding-bottom: 1px;
+    margin-top: 11px;
+    margin-bottom: 6px;
+  }
+
+  .item-header, .item-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .item-header { margin-top: 5px; }
+  .item-title-row { margin-bottom: 3px; }
+
+  .organization { font-weight: 700; font-size: 10.5pt; }
+  .location { font-size: 9.5pt; font-style: italic; }
+  .role-title { font-weight: 600; font-style: italic; font-size: 10pt; }
+  .date { font-size: 9.5pt; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .project-name { font-weight: 700; font-size: 10pt; }
+  .project-tech { font-size: 9.5pt; color: #333; font-style: italic; }
+
+  ul { margin: 2px 0 5px 0; padding-left: 1.2em; list-style: none; }
+  ul li { position: relative; margin-bottom: 3px; text-align: justify; }
+  ul li::before { content: '▪'; font-size: 7pt; position: absolute; left: -1.1em; top: 0; color: #222; }
+
+  .skills-block { margin-top: 4px; }
+  .skills-block p { margin-bottom: 3px; text-align: justify; font-size: 10pt; line-height: 1.34; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { width: 100%; min-height: auto; padding: 0.55in 0.75in; box-shadow: none; margin: 0; }
+    @page { margin: 0; size: letter; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div>
+      <div class="name">Tomás Valenzuela Vilches</div>
+      <div class="headline">Ingeniero de Software &mdash; Plataforma, Backend & Full-Stack</div>
+    </div>
+    <div class="contact">
+      Santiago, Chile &bull; +56 9 4554 4965<br>
+      <a href="mailto:tomas.valenzuelavi@usm.cl">tomas.valenzuelavi@usm.cl</a><br>
+      <a href="https://github.com/Waryxxful" target="_blank">github.com/Waryxxful</a>
+    </div>
+  </div>
+
+  <p class="summary">
+    Me gusta construir la base sobre la que trabajan otros equipos: autenticación, aislamiento por cliente, tiempo
+    real y despliegues predecibles. En GranCRM soy responsable del control plane multi-tenant y he llevado el
+    ecosistema de iframes sueltos a una plataforma de micro-frontends con más de 20 sistemas.
+  </p>
+
+  <div class="section-title">Educación</div>
+
+  <div class="item-header">
+    <span class="organization">Universidad Técnica Federico Santa María</span>
+    <span class="location">Santiago, Chile</span>
+  </div>
+  <div class="item-title-row">
+    <span class="role-title">Ingeniería Civil Informática</span>
+    <span class="date">2021 &ndash; Presente</span>
+  </div>
+
+  <div class="section-title">Experiencia Profesional</div>
+
+  <div class="item-header">
+    <span class="organization">InTouchCRM / GranCRM</span>
+    <span class="location">Santiago, Chile</span>
+  </div>
+  <div class="item-title-row">
+    <span class="role-title">Ingeniero de Software & Inteligencia Artificial</span>
+    <span class="date">Agosto 2025 &ndash; Presente</span>
+  </div>
+  <ul>
+    <li><strong>Control plane multi-tenant:</strong> orquestador en <strong>Django 5.2 + SQL Server</strong> con SSO por JWT, una base de
+      datos por cliente con enrutamiento <em>fail-closed</em>, revocación de sesiones, aprovisionamiento automático e impersonación
+      segura de clientes para soporte.</li>
+    <li><strong>Micro-frontends:</strong> migré las apps de iframes a <strong>Module Federation (React 18 + Vite)</strong> y separé el shell en
+      su propio proyecto, todo detrás de un gateway <strong>Nginx</strong> single-origin con TLS, CSP y HSTS.</li>
+    <li><strong>Notificaciones en tiempo real:</strong> campanita del ecosistema con <strong>SSE</strong> y Web Push, suscripción por tipo de
+      evento y una API interna para que cualquier app avise a sus usuarios.</li>
+    <li><strong>Entornos y operación:</strong> DEV, QA y PROD con Docker Compose, credenciales SQL de mínimo privilegio por entorno y
+      runbooks de despliegue; resolví las caídas por memoria de QA (49 contenedores en 7,8 GB) midiendo el uso real.</li>
+    <li><strong>Documentación como código:</strong> escribí la base única de documentación del ecosistema (23 sistemas, contratos de
+      integración y límites del orquestador), donde cada afirmación cita el código que la respalda.</li>
+  </ul>
+
+  <div class="section-title">Proyectos Destacados</div>
+
+  <div class="item-header">
+    <span class="project-name">Omnicanal & Omnitouch — Contact center propio</span>
+    <span class="date">2026</span>
+  </div>
+  <div class="project-tech">Django ASGI, Channels, WebSockets, React 18, TypeScript, Meta Graph API</div>
+  <ul>
+    <li>Reemplazo de Infobip construido desde cero: WhatsApp, Messenger, Instagram y chat web en una sola bandeja en tiempo
+      real, con colas y SLA, reglas de asignación, plantillas y un widget web embebible sin dependencias.</li>
+  </ul>
+
+  <div class="item-header">
+    <span class="project-name">Agentes de WhatsApp con IA — Astara, CAVEM e InTouch</span>
+    <span class="date">2026</span>
+  </div>
+  <div class="project-tech">Python, LangGraph, Gemini, DeepSeek, FastAPI, pgvector</div>
+  <ul>
+    <li>Bots en producción integrados a la plataforma: agendamiento y cotizaciones con tool calling contra la base de datos,
+      RAG híbrido y derivación a ejecutivos humanos; despachadores del webhook de Meta que enrutan por número.</li>
+  </ul>
+
+  <div class="item-header">
+    <span class="project-name">Sistema de diseño <code>@duralux/ui</code></span>
+    <span class="date">2026</span>
+  </div>
+  <div class="project-tech">React 18, TypeScript, SCSS, Storybook, Vitest</div>
+  <ul>
+    <li>Librería de componentes compartida por las apps satélite, con tokens de diseño y reglas de fidelidad visual.</li>
+  </ul>
+
+  <div class="section-title">Habilidades Técnicas</div>
+
+  <div class="skills-block">
+    <p><strong>Backend & Tiempo real:</strong> Django 5.2, Django Channels, Django Ninja, FastAPI, Celery, Redis, ASGI, WebSockets,
+      SSE, REST, Webhooks, JWT/SSO.</p>
+    <p><strong>Datos:</strong> SQL Server (T-SQL, stored procedures), PostgreSQL, pgvector, SQLite.</p>
+    <p><strong>Frontend:</strong> React 18, TypeScript, Vite, Module Federation, Storybook, Vitest, Bootstrap 5, Tailwind CSS.</p>
+    <p><strong>Infraestructura & Calidad:</strong> Docker Compose, Nginx, Linux, GitHub Actions, pytest, Playwright.</p>
+    <p><strong>IA:</strong> LangGraph, LangChain, MCP, Gemini, Claude, DeepSeek, RAG. <strong>Idiomas:</strong> Español (nativo), Inglés (técnico intermedio-avanzado).</p>
+  </div>
+
+</div>
+</body>
+</html>
